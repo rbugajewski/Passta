@@ -89,9 +89,9 @@ class Passwordstore {
         // If you have a password for apple.com, but not secure.apple.com, the latter would
         // not be found. Using this part, the secure. prefix will be removed and apple.com will be searched.
         if resultPaths.isEmpty {
-            let passwordParts = password.components(separatedBy: ".")
-            if passwordParts.count > 2 {
-                let shortPassword = passwordParts.dropFirst().joined(separator: ".")
+            let domains = password.components(separatedBy: ".")
+            if domains.count > 1 {
+                let shortPassword = domains.count > 2 ? domains.dropFirst().joined(separator: ".") : domains.first!
                 return passSearch(password: shortPassword)
             }
         }
