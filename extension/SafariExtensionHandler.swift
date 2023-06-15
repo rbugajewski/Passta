@@ -54,10 +54,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                                 password = credentials[0]
 
                                 if credentials.count > 1 {
-                                    if credentials[1].count > 0 {
-                                        let loginDirty = credentials[1].drop(while: {$0 != ":"})
-                                        login = String(loginDirty.dropFirst()).trimmingCharacters(in: .whitespacesAndNewlines)
-                                    }
+                                    login = Password(container: credentials).parseLogin()
                                 }
                             }
 

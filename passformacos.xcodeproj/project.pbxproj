@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31814C832A3B74A400008C6D /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31814C822A3B74A400008C6D /* Password.swift */; };
+		31814C842A3B74A400008C6D /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31814C822A3B74A400008C6D /* Password.swift */; };
 		7511A35E219B52B7008290E9 /* passformacosFillForm.js in Resources */ = {isa = PBXBuildFile; fileRef = 75E07C1C216E0DA700EA9CBD /* passformacosFillForm.js */; };
 		7511A361219B53C5008290E9 /* passformacosToast.css in Resources */ = {isa = PBXBuildFile; fileRef = 7511A360219B53C5008290E9 /* passformacosToast.css */; };
 		7540890F25BB3F4500CC8A8A /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540890E25BB3F4500CC8A8A /* Shortcut.swift */; };
@@ -69,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31814C822A3B74A400008C6D /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		7511A360219B53C5008290E9 /* passformacosToast.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = passformacosToast.css; sourceTree = "<group>"; };
 		7540890E25BB3F4500CC8A8A /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		7540891725BD796C00CC8A8A /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		75E07BDE216E0D8D00EA9CBD /* passformacos */ = {
 			isa = PBXGroup;
 			children = (
+				31814C822A3B74A400008C6D /* Password.swift */,
 				75494A0A218CCC7F00148925 /* ServerHandler.swift */,
 				756E0B992185F9DA0079B98C /* Passwordstore.swift */,
 				75E07BDF216E0D8D00EA9CBD /* AppDelegate.swift */,
@@ -237,7 +241,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = "Artur Sterz";
+				ORGANIZATIONNAME = "Rafael Bugajewski";
 				TargetAttributes = {
 					75E07BDB216E0D8D00EA9CBD = {
 						CreatedOnToolsVersion = 10.0;
@@ -269,7 +273,7 @@
 				};
 			};
 			buildConfigurationList = 75E07BD7216E0D8D00EA9CBD /* Build configuration list for PBXProject "passformacos" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -321,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31814C832A3B74A400008C6D /* Password.swift in Sources */,
 				7540891B25BD79B200CC8A8A /* GeneralPreferencesViewController.swift in Sources */,
 				75494A0B218CCC7F00148925 /* ServerHandler.swift in Sources */,
 				75E07BE2216E0D8D00EA9CBD /* ViewController.swift in Sources */,
@@ -336,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31814C842A3B74A400008C6D /* Password.swift in Sources */,
 				75E07C17216E0DA700EA9CBD /* SafariExtensionViewController.swift in Sources */,
 				75494A0F218CCEBD00148925 /* ClientHandler.swift in Sources */,
 				75E07C15216E0DA700EA9CBD /* SafariExtensionHandler.swift in Sources */,
@@ -424,7 +430,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -481,7 +487,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "";
@@ -497,11 +503,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = passformacos/passformacos.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.11.4;
-				DEVELOPMENT_TEAM = BR355MFMD5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +522,7 @@
 				MARKETING_VERSION = 0.11.4;
 				PRODUCT_BUNDLE_IDENTIFIER = de.artursterz.passformacos;
 				PRODUCT_NAME = "Pass for macOS";
-				PROVISIONING_PROFILE_SPECIFIER = "Pass for macOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -527,11 +533,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = passformacos/passformacos.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0.11.4;
-				DEVELOPMENT_TEAM = BR355MFMD5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,7 +552,7 @@
 				MARKETING_VERSION = 0.11.4;
 				PRODUCT_BUNDLE_IDENTIFIER = de.artursterz.passformacos;
 				PRODUCT_NAME = "Pass for macOS";
-				PROVISIONING_PROFILE_SPECIFIER = "Pass for macOS";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -555,10 +561,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.11.4;
-				DEVELOPMENT_TEAM = BR355MFMD5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -570,7 +576,7 @@
 				MARKETING_VERSION = 0.11.4;
 				PRODUCT_BUNDLE_IDENTIFIER = de.artursterz.passformacos.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Pass for macOS Extension";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -580,10 +586,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.11.4;
-				DEVELOPMENT_TEAM = BR355MFMD5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -595,7 +601,7 @@
 				MARKETING_VERSION = 0.11.4;
 				PRODUCT_BUNDLE_IDENTIFIER = de.artursterz.passformacos.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Pass for macOS Extension";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
