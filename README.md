@@ -1,6 +1,6 @@
 # Passta
 
-**Passta is the *Password Store Terminal Assistant* for [Password Store (`pass`)](https://www.passwordstore.org) that just works on your Mac. It retrieves your decrypted passwords for the current domain and allows you to auto-fill login forms.**
+**Passta is the *Password Store Terminal Assistant* for [`pass`](https://www.passwordstore.org) that just works on your Mac. It retrieves your decrypted passwords for the current domain and allows you to auto-fill login forms.**
 
 Passta consists of two parts.
 
