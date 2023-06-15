@@ -63,7 +63,7 @@ You can install Passta using homebrew.
 Just run the following command:
 
 ```
-brew install --cask rbugajewski/tap/passta
+brew install --cask rbugajewski/passta/passta
 ```
 
 ### Option 3: Build it yourself
