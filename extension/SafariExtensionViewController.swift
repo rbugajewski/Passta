@@ -30,6 +30,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     @IBOutlet weak var startPassformacosButton: NSButton!
     
     var resultsPasswords: [String]?
+
+    let LoginPrefix = "login:"
     
     @IBAction func startPassformacos(_ sender: Any) {
         let bundlePath = NSWorkspace.shared.fullPath(forApplication: "Pass for macOS.app")
@@ -68,10 +70,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
             password = credentials[0]
 
             if credentials.count > 1 {
-                if credentials[1].count > 0 {
-                    let loginDirty = credentials[1].drop(while: {$0 != ":"})
-                    login = String(loginDirty.dropFirst()).trimmingCharacters(in: .whitespacesAndNewlines)
-                }
+                login = parseLogin(credentials: credentials)
             }
         }
         
@@ -205,6 +204,28 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         fillPasswordFromSelection()
     }
 
+
+    /// Parses unencrypted container until it finds a line with the prefix `LoginPrefix`, if not found naively returns the value
+    /// of the second line, or an empty string.
+    /// - Parameter credentials: Unencrypted password store container.
+    /// - Returns: Login if found, empty string otherwise.
+    private func parseLogin(credentials: [String]) -> String {
+        guard credentials.count > 1 else { return "" }
+
+        guard let login = credentials.first(where: { line in
+            line.lowercased().hasPrefix(LoginPrefix)
+        })?.deletingPrefix(LoginPrefix)?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            if credentials[1].count > 0  {
+                let loginDirty = credentials[1].drop(while: {$0 != ":"})
+
+                return String(loginDirty.dropFirst()).trimmingCharacters(in: .whitespacesAndNewlines)
+            } else {
+                return ""
+            }
+        }
+
+        return login
+    }
 }
 
 extension SafariExtensionViewController: NSTableViewDataSource, NSTableViewDelegate {
@@ -214,5 +235,13 @@ extension SafariExtensionViewController: NSTableViewDataSource, NSTableViewDeleg
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         return (resultsPasswords!)[row]
+    }
+}
+
+extension String {
+    func deletingPrefix(_ prefix: String) -> String? {
+        guard self.hasPrefix(prefix) else { return nil }
+
+        return String(self.dropFirst(prefix.count))
     }
 }
